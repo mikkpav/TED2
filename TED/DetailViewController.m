@@ -43,6 +43,7 @@
   
   [self.tableView setSeparatorColor:[UIColor whiteColor]];
   
+  
   BackgroundImageCell *cell = [BackgroundImageCell cellWithItem:self.item];
   [self setBackgroundCell:cell];
 }
