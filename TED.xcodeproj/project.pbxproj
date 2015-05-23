@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222B015C24C0444F3894B467 /* Pods_TED.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73291F706E693DA2957EE714 /* Pods_TED.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		421B4A1C1AB1FF0F0048A46E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B4A1B1AB1FF0F0048A46E /* main.m */; };
 		421B4A1F1AB1FF0F0048A46E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B4A1E1AB1FF0F0048A46E /* AppDelegate.m */; };
 		421B4A221AB1FF0F0048A46E /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421B4A211AB1FF0F0048A46E /* MasterViewController.m */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F3B9B85C17591070B2EC9C7 /* Pods-TED.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TED.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TED/Pods-TED.debug.xcconfig"; sourceTree = "<group>"; };
 		421B4A161AB1FF0F0048A46E /* TED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421B4A1A1AB1FF0F0048A46E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		421B4A1B1AB1FF0F0048A46E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,6 +151,8 @@
 		4280E84F1AB5AE0000C42FAA /* ted144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ted144.png; path = Assets/ted144.png; sourceTree = "<group>"; };
 		4280E8501AB5AE0000C42FAA /* ted152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ted152.png; path = Assets/ted152.png; sourceTree = "<group>"; };
 		4280E8511AB5AE0000C42FAA /* ted180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ted180.png; path = Assets/ted180.png; sourceTree = "<group>"; };
+		73291F706E693DA2957EE714 /* Pods_TED.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TED.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A88475CA711FC551D658EA2E /* Pods-TED.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TED.release.xcconfig"; path = "Pods/Target Support Files/Pods-TED/Pods-TED.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4280E8201AB57B3300C42FAA /* SystemConfiguration.framework in Frameworks */,
+				222B015C24C0444F3894B467 /* Pods_TED.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +175,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E273B73848B130530EB66B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F3B9B85C17591070B2EC9C7 /* Pods-TED.debug.xcconfig */,
+				A88475CA711FC551D658EA2E /* Pods-TED.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		420A8DA31AB4BE3C009553C3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +216,8 @@
 				4280E81F1AB57B3300C42FAA /* SystemConfiguration.framework */,
 				421B4A351AB1FF0F0048A46E /* TEDTests */,
 				421B4A171AB1FF0F0048A46E /* Products */,
+				1E273B73848B130530EB66B2 /* Pods */,
+				FDB6E1C334F305CEF9A426AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -328,6 +344,14 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		FDB6E1C334F305CEF9A426AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73291F706E693DA2957EE714 /* Pods_TED.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,9 +359,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 421B4A3C1AB1FF0F0048A46E /* Build configuration list for PBXNativeTarget "TED" */;
 			buildPhases = (
+				4986BC94D84E82BCA0E700BB /* Check Pods Manifest.lock */,
 				421B4A121AB1FF0F0048A46E /* Sources */,
 				421B4A131AB1FF0F0048A46E /* Frameworks */,
 				421B4A141AB1FF0F0048A46E /* Resources */,
+				BBC49870358B1EF3D10C44FE /* Embed Pods Frameworks */,
+				AEBABF28F708AB0D73974FDE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,6 +467,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4986BC94D84E82BCA0E700BB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEBABF28F708AB0D73974FDE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TED/Pods-TED-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBC49870358B1EF3D10C44FE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TED/Pods-TED-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		421B4A121AB1FF0F0048A46E /* Sources */ = {
@@ -585,6 +660,7 @@
 		};
 		421B4A3D1AB1FF0F0048A46E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3B9B85C17591070B2EC9C7 /* Pods-TED.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -600,6 +676,7 @@
 		};
 		421B4A3E1AB1FF0F0048A46E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A88475CA711FC551D658EA2E /* Pods-TED.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
