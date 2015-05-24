@@ -12,6 +12,8 @@
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
+@property (nonatomic, strong) MasterViewController *masterViewController;
+
 @end
 
 @implementation AppDelegate
@@ -20,6 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   MasterViewController *masterController = [[MasterViewController alloc] init];
+  [self setMasterViewController:masterController];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:masterController];
   [self.window setRootViewController:navigationController];
   [self.window makeKeyAndVisible];
@@ -27,6 +30,10 @@
   
   
   return YES;
+}
+
+- (MasterViewController *)masterController {
+  return self.masterViewController;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

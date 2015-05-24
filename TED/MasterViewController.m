@@ -58,6 +58,10 @@
   [[NSNotificationCenter defaultCenter] removeObserver:self name:kNetworkConnectionNone object:nil];
 }
 
+- (NSInteger)add:(NSInteger)first to:(NSInteger)second {
+  return first + second;
+}
+
 - (void)setupNetworkObservation
 {
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkConnectionGotNone:) name:kNetworkConnectionNone object:nil];

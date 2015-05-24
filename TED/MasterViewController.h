@@ -14,5 +14,7 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
+- (NSInteger)add:(NSInteger)first to:(NSInteger)second;
+
 @end
 
